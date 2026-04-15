@@ -1,0 +1,25 @@
+---
+title: "Test Strategy"
+weight: 4
+---
+
+## Assumptions:
+
+- Teams are test-driving where the technology permits.
+- Teams are monitoring and improving test quality.
+- Testing tech stacks are recommendations.
+- Teams can use other technologies with Engineering Leadership agreement.
+- Teams should understand that Platform Services is aimed at "80/20" rule and automation help may not be available for one-off technology choices.
+
+## Testing Types
+
+| TestingType      | Definition                                                                                                                                                          | Lifecycle / PDO                                                                                       | Testing resources                                                                 |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Unit             | Testing individual components, few inputs and one output. Tests logic and not configuration/infrastructure.                                                         | Strategy - code that is intended to be part of the solution should be test-driven                     | [JUnit](https://junit.org/junit5/), [Quick/Nimble](https://github.com/Quick/Nimble), [Jest](https://jestjs.io/), [Mocha](https://mochajs.org/), [XCTest](https://developer.apple.com/documentation/xctest)                                          |
+| Mutation Testing | Mutation Testing evaluates test case effectiveness by introducing small changes to the code and checking if the tests can detect them, identifying weaknesses in the test suite. | Strategy - code that is intended to be part of the solution should be test-driven                     | [Pitest](https://pitest.org), [Arcmutate](https://www.arcmutate.com)                                                                 |
+| Contract         | Contract testing is a way to verify inputs and outputs of a contract (for example, a RESTful API) without having to invoke the service.                              | Discovery - apps should test contracts with other teams prior to moving to Staging                    | [Pact](https://pact.io/)                                                                               |
+| Integration      | Test that exercises integration between different components/resources. Exercises both code and configuration/infrastructure.                                        | Discovery - apps should test contracts with other teams prior to moving to Staging                    | [REST Assured](http://rest-assured.io/), [Postman](https://www.postman.com/), [JMeter](https://jmeter.apache.org/)                                                     |
+| UI/Flow & End-to-End | Test the look, feel, and user experience. Test that pages are rendered correctly based on the state of the application. Test that the user experience is correct moving from page to page. Also, test that begins at the entrance point to the system (user interface, API, etc) and completes an entire business-relevant flow. Tests the entire stack without any mocks. | Discovery - apps should test their configuration prior to moving to Staging, Pilot - full             | [Playwright](https://playwright.dev/), [Cypress](https://www.cypress.io/)                                                               |
+| Performance & Load | Test to ensure the system meets performance requirements under expected load conditions. Also, test to ensure the system can handle a high volume of transactions or data. | Pilot - full                                                                                          | [Artillery](https://artillery.io/), [JMeter](https://jmeter.apache.org/)                                                                 |
+| Smoke            | Preliminary test to check the basic functionality of the application.                                                                                               | Discovery - apps should test their configuration prior to moving to Staging                           | [Playwright](https://playwright.dev/), [Cypress](https://www.cypress.io/)                                                               |
+| Canary           | Deploying a new version of the application to a small subset of users to ensure it works as expected before rolling it out to everyone.                             | Pilot - full                                                                                          |                                                           |

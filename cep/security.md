@@ -1,0 +1,14 @@
+# Security 🚧
+
+We must build products that are consistent, secure, and reliable. We use supported and secure technologies which are kept up to date.
+
+1. You can check EAMS technology management to determine if the technology is already approved for use at the organization. If your technology is in code (e.g., libraries), FOSSA and Checkmarx can tell you if there are updates available for your application that fix vulnerabilities.
+2. We automate testing wherever possible and run these tests regularly.
+3. Product Security has additional API resources that can be found here: https://vehiclecybersecurity.company.com/services/api-security/api-resources. If you have questions about the API standards and their interpretation, you should attend Product’s API Office Hours.
+
+To ensure accuracy, continuity, and accountability, no one person should have complete control over a process. This is reflected both in our change management processes and in how we implement Segregation of Duties (also called Separation of Duties).
+
+1. Changes that could affect production or operations must be approved and tested.
+   This reduces the risk of errors, downtime, and security breaches. It ensures changes are reviewed and approved before implementation. It prevents unauthorized or poorly planned changes. Change management helps to maintain compliance with regulations and industry standards. It helps to manage risk, improve efficiency, and maintain compliance. The relevant standard related to this topic is the “Change Management Standard” in the [policy portal](https://www.policyportal.company.com/D2/#d2). Please ensure to review other relevant documents within the [policy portal](https://www.policyportal.company.com/D2/#d2) that reference change management. Segregation of Duties involves separating duties and responsibilities so that no single person has complete control over a process or transaction. This reduces the risk of unauthorized or inappropriate actions, errors, or mistakes. Segregation of duties helps to ensure that checks and balances are in place, and that multiple people are involved in key decision-making processes. It also helps to maintain compliance with regulatory requirements and industry standards.
+2. Organization requires Platform+ to follow the “Segregation of Duties Standard” and one can access this document in the [policy portal](https://www.policyportal.company.com/D2/#d2).
+   Platform+ endorses pair programming and trunk-based development as one way to enforce Segregation of Duties and to implement change management. With pair programming, no developer alone should be responsible for changes to code or configurations, except in emergencies. With Trunk Based Development, all changes are made directly to the main codebase, which enforces change control by requiring all changes to go through a review process and testing before they are merged into the main codebase.

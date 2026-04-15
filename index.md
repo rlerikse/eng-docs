@@ -1,0 +1,1 @@
+It is a framework of practices derived from the Community of Practice teams to enhance productivity, alignment and culture for Platform Technology to serve the commercial customer.
